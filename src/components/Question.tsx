@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Data } from "../hooks/useFetch";
-import { ElapsedQuestion } from "./GameSession";
+import { CleanQuestion } from "../@types/CleanQuestion";
+import { ElapsedQuestion } from "../@types/ElapsedQuestion";
 
 type Props = {
-  question: Data;
+  question: CleanQuestion;
   questionNumber: number;
   totalQuestions: number;
   nextQuestion: (currentQuestion: ElapsedQuestion) => void;

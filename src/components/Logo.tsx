@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoIcon from "./LogoIcon";
 
-type Props = {};
-
-const Logo: React.FC = (props) => {
+const Logo: React.FC = () => {
   return (
     <Link to="/" className="inline-block p-2">
       <LogoIcon styleClass="h-10 inline-block mr-2 fill-sky-600" />

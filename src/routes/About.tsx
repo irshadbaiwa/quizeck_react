@@ -26,13 +26,14 @@ const About: React.FC = () => {
             target="_blank"
             className="text-blue-400"
           >
-            irshadbaiwa
+            {" "}
+            irshadbaiwa{" "}
           </a>
           using React, react-router, create-react-app, Tailwind and FontAwesome
           Icons.
         </p>
         <p className="mt-6">
-          Questions are fetched from
+          Questions are fetched from{" "}
           <a
             href="https://opentdb.com"
             target="_blank"

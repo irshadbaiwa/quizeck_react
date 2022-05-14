@@ -2,17 +2,11 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { ResultContext } from "../store/ResultStore";
 import Question from "./Question";
-import { Data } from "../hooks/useFetch";
+import { CleanQuestion } from "../@types/CleanQuestion";
+import { ElapsedQuestion } from "../@types/ElapsedQuestion";
 
 type Props = {
-  questions: Data[];
-};
-
-export type ElapsedQuestion = {
-  questionNumber: number;
-  questionText: string;
-  correctAnswer: string;
-  selectedAnswer: string;
+  questions: CleanQuestion[];
 };
 
 const GameSession: React.FC<Props> = ({ questions }) => {
@@ -35,6 +29,7 @@ const GameSession: React.FC<Props> = ({ questions }) => {
 
   // Context to store final result
   const [result, updateResult] = useContext(ResultContext);
+
   // Finish quiz
   function finishQuiz(lastQuestion: ElapsedQuestion): void {
     setElapsedQuestions((prevState) => [...prevState, lastQuestion]);

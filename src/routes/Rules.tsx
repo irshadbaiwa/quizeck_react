@@ -24,7 +24,7 @@ const Rules: React.FC = () => {
           Playing the game/quiz is easy.
           <ul>
             <li>
-              Head to
+              Head to{" "}
               <Link to="/play" className="text-blue-400">
                 '/play' page
               </Link>
@@ -35,7 +35,7 @@ const Rules: React.FC = () => {
           </ul>
         </div>
         <p className="mt-6">
-          Questions are fetched from
+          Questions are fetched from{" "}
           <a
             href="https://opentdb.com"
             target="_blank"

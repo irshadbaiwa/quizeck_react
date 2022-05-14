@@ -4,12 +4,13 @@ import { ResultContext } from "../store/ResultStore";
 import Header from "../components/Header";
 import LogoIcon from "../components/LogoIcon";
 import { getScore } from "../helpers/getScore";
+import { ElapsedQuestion } from "../@types/ElapsedQuestion";
 
 export default function Result() {
   const [result, updateResult] = useContext(ResultContext);
-  const score = getScore(result);
+  const score: number = getScore(result);
 
-  function isCorrect(question: any): boolean {
+  function isCorrect(question: ElapsedQuestion): boolean {
     return question.selectedAnswer === question.correctAnswer;
   }
 
@@ -38,7 +39,7 @@ export default function Result() {
         <h1>
           Your score is:{" "}
           <span className={score >= 50 ? "text-emerald-700" : "text-rose-700"}>
-            {`${score}%`}
+            {`${score.toFixed(1)}%`}
           </span>
         </h1>
       </section>
