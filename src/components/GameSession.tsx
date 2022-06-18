@@ -32,9 +32,8 @@ const GameSession: React.FC<Props> = ({ questions }) => {
 
   // Finish quiz
   function finishQuiz(lastQuestion: ElapsedQuestion): void {
-    setElapsedQuestions((prevState) => [...prevState, lastQuestion]);
     // Store all elapsed questions to context
-    updateResult(elapsedQuestions);
+    updateResult([...elapsedQuestions, lastQuestion]);
 
     // redirect to results page
     navigate("/result");
